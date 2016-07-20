@@ -1,0 +1,24 @@
+{
+  "name": "mongoose-user",
+  "version": "1.0.0",
+  "description": "",
+  "main": "date.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "test:watch": "mocha --watch"
+  },
+  "devDependencies": {
+    "mocha": "^2.5.3",
+    "chai": "^3.5.0",
+    "mongoose": "^4.5.5"
+  },
+  "author": "ROJO 2 <hola@rojo2.com> (http://rojo2.com)",
+  "license": "MIT",
+  "dependencies": {
+    "mongoose-date": "git://github.com/rojo2/mongoose-date.git",
+    "mongoose-password": "git://github.com/rojo2/mongoose-password.git"
+  }
+}
