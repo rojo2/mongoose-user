@@ -4,7 +4,8 @@
 This mongoose plugin adds four properties to the schema: `username`, `email`,
 `password` and `status`.
 
-`status` represents the three main possible statuses of a user.
+`status` represents the three main possible statuses of a user `not-enabled`,
+`enabled` and `disabled`.
 
 ```javascript
 const user = require("mongoose-user");
