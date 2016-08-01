@@ -2,7 +2,10 @@
   "name": "mongoose-user",
   "version": "1.0.0",
   "description": "",
-  "main": "date.js",
+  "main": "user.js",
+  "engines": {
+    "node": ">=6.3.0"
+  },
   "directories": {
     "test": "test"
   },
