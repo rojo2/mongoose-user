@@ -1,11 +1,8 @@
 {
-  "name": "mongoose-user",
-  "version": "1.0.0",
-  "description": "",
-  "main": "user.js",
-  "engines": {
-    "node": ">=6.3.0"
-  },
+  "name": "@rojo2/mongoose-user",
+  "version": "1.0.1",
+  "description": "![Travis CI](https://travis-ci.org/rojo2/mongoose-user.svg?branch=master)",
+  "main": "date.js",
   "directories": {
     "test": "test"
   },
@@ -23,5 +20,17 @@
   "dependencies": {
     "mongoose-date": "git://github.com/rojo2/mongoose-date.git",
     "mongoose-password": "git://github.com/rojo2/mongoose-password.git"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rojo2/mongoose-user.git"
+  },
+  "keywords": [
+    "mongoose",
+    "user"
+  ],
+  "bugs": {
+    "url": "https://github.com/rojo2/mongoose-user/issues"
+  },
+  "homepage": "https://github.com/rojo2/mongoose-user#readme"
 }
