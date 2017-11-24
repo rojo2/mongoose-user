@@ -1,25 +1,26 @@
 {
   "name": "@rojo2/mongoose-user",
   "version": "1.0.1",
-  "description": "This mongoose plugin adds four properties to the schema: `username`, `email`, `password` and `status`.",
+  "description": "Adds four properties to the schema: `username`, `email`, `password` and `status`.",
   "main": "user.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "mocha",
-    "test:watch": "mocha --watch"
+    "test": "mocha --require chai/register-expect",
+    "test:watch": "mocha --require chai/register-expect --watch"
   },
   "devDependencies": {
-    "mocha": "^2.5.3",
-    "chai": "^3.5.0",
-    "mongoose": "^4.5.5"
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "mongoose": "^4.13.5"
   },
   "author": "ROJO 2 <hola@rojo2.com> (http://rojo2.com)",
   "license": "MIT",
   "dependencies": {
-    "mongoose-date": "git://github.com/rojo2/mongoose-date.git",
-    "mongoose-password": "git://github.com/rojo2/mongoose-password.git"
+    "@rojo2/mongoose-date": "^1.0.1",
+    "@rojo2/mongoose-password": "^1.0.2",
+    "@rojo2/mongoose-status": "^1.0.1"
   },
   "repository": {
     "type": "git",

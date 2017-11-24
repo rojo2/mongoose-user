@@ -1,5 +1,6 @@
-const date = require("mongoose-date");
-const password = require("mongoose-password");
+const date = require("@rojo2/mongoose-date");
+const password = require("@rojo2/mongoose-password");
+const status = require("@rojo2/mongoose-status");
 
 const UserStatus = {
   NOT_ENABLED: "not-enabled",
@@ -46,6 +47,15 @@ module.exports = function(schema, options) {
 
   schema.plugin(date);
   schema.plugin(password);
+  schema.plugin(status, {
+    default: UserStatusDefault,
+    enum: UserStatusEnum,
+    transitions: {
+      [UserStatus.NOT_ENABLED]: [UserStatus.ENABLED],
+      [UserStatus.ENABLED]: [UserStatus.DISABLED],
+      [UserStatus.DISABLED]: [UserStatus.ENABLED]
+    }
+  });
 
   schema.virtual("isNotEnabled").get(function() {
     return this.status === UserStatus.NOT_ENABLED;

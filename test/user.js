@@ -1,4 +1,3 @@
-const {expect} = require("chai");
 const mongoose = require("mongoose");
 const user = require("../user");
 
@@ -9,7 +8,7 @@ describe("User", function() {
   before((done) => {
 
     mongoose.Promise = global.Promise;
-    mongoose.connect("mongodb://localhost/mongoose-test", (err) => {
+    mongoose.connect("mongodb://localhost/mongoose-test", { useMongoClient: true }, (err) => {
 
       if (err) {
         return done(err);
@@ -25,7 +24,7 @@ describe("User", function() {
         UserSchema.plugin(user);
 
         const User = mongoose.model("user", UserSchema);
-      } 
+      }
 
       const User = mongoose.model("user");
       User.remove().then(() => done());
@@ -116,7 +115,7 @@ describe("User", function() {
     });
 
   });
- 
+
   it("should try to create a new user with the same as the first one", (done) => {
 
     const User = mongoose.model("user");
