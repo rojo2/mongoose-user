@@ -1,8 +1,8 @@
 {
   "name": "@rojo2/mongoose-user",
   "version": "1.0.1",
-  "description": "![Travis CI](https://travis-ci.org/rojo2/mongoose-user.svg?branch=master)",
-  "main": "date.js",
+  "description": "This mongoose plugin adds four properties to the schema: `username`, `email`, `password` and `status`.",
+  "main": "user.js",
   "directories": {
     "test": "test"
   },
